@@ -30,7 +30,7 @@ public class test {
 		String mm = T.substring(4,6);
 		String dd = T.substring(6,8);
 		
-		//월 인덱스
+		//월 인덱스  
 		int idx = Integer.parseInt(mm);
 		//비교할 날짜
 		int comp = Integer.parseInt(dd);
