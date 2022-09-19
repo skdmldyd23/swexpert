@@ -12,7 +12,7 @@ class Solution
 		for(int i = 1; i <= T; i++)
 		{
 			String date;
-            date = sc.next();
+			date = sc.next();
             
 
         	if(date.substring(4,6).equals("01") || date.substring(4,6).equals("02") || date.substring(4,6).equals("03") || date.substring(4,6).equals("04") || date.substring(4,6).equals("05") || date.substring(4,6).equals("06") || date.substring(4,6).equals("07") || date.substring(4,6).equals("08") || date.substring(4,6).equals("09") || date.substring(4,6).equals("10") || date.substring(4,6).equals("11") || date.substring(4,6).equals("12")){
