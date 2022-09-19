@@ -10,28 +10,31 @@ public class test {
 		Scanner sc = new java.util.Scanner(System.in);
 		String T = "";
 		SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");
-		//½ºÆ®¸µÀ¸·Î ¹Ş¾Æ¼­
+		//ë°›ì•„ì„œ
 		T=sc.next();
 		
-		//µ¥ÀÌÆ®Çü½ÄÀ¸·Î Çüº¯È¯
+		//ë°ì´íŠ¸ë¡œ ë³€ê²½
 		SimpleDateFormat defultFormat = new SimpleDateFormat("yyyyMMdd");
 		Date formatDate = defultFormat.parse(T);
 		
-		//º¯È¯ ÈÄ ½ºÆ®¸µ°ú ÀÔ·Â°ª ºñ±³
+		//ë³€ê²½ëœ ê²ƒê³¼ ê¸°ë³¸ ë¹„êµ
 		if(defultFormat.format(formatDate).equals(T) == false)
 			System.out.println("-1");
-		//Æ÷¸Ë¿¡ ¸ÂÃç¼­ Çüº¯È¯
+		//ë‹¤ë¥¸ í¬ë§·ìœ¼ë¡œ í˜¸ì¶œ
 		else
 			System.out.println(df.format(formatDate));
 		
-		//ÀÎµ¦½º´Â 0ºÎÅÍ ½ÃÀÛÀÌ¶ó¼­
+		//0ë¶€í„°ì‹œì‘
 		int[] endDateArr = {0,31,28,31,30,31,30,31,31,30,31,30,31};
 		String yyyy = T.substring(0,4);
 		String mm = T.substring(4,6);
-		String dd = T.substring(6,8); 
+		String dd = T.substring(6,8);
 		
+		//ì›” ì¸ë±ìŠ¤
 		int idx = Integer.parseInt(mm);
+		//ë¹„êµí•  ë‚ ì§œ
 		int comp = Integer.parseInt(dd);
+		//ë‚ ì§œê°€ 1ë³´ë‹¤ ì‘ê±°ë‚˜ ë°°ì—´ë³´ë‹¤ í¬ë©´ -1 ì•„ë‹ˆë©´ ì¶œë ¥
 		if(comp < 1 || endDateArr[idx] < comp) System.out.println(-1);
 		else System.out.println(yyyy+"/"+mm+"/"+dd);
 	}
